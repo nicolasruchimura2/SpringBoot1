@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/home")
@@ -14,13 +14,13 @@ public class PrimeiroController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public String get(){
-        return "You're in Home Page!";
+        return "This is GeT .";
     }
 
     //Segundo EndPoint
-    @GetMapping("/dashboard")
-    @ResponseStatus(HttpStatus.OK)
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public String get1(){
-        return "This is dashboard lobby.";
+        return "This is PosT .";
     }
 }
